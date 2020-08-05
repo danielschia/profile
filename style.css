@@ -1,0 +1,67 @@
+h1 {
+    color: #536B78;
+    font-weight: 700;
+}
+h2 {
+    color: #7C98B3;
+    font-weight: 400;
+}
+body{
+    background-color: #CEE5F2;
+    font-family: 'Recursive', sans-serif;
+}
+p{
+    color: #637081;
+    font-weight: 400;
+}
+a{
+    color: rgba(160, 160, 160, 0.8);
+}
+a:hover {
+    color: black;
+}
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+.text-center {
+    text-align: center;
+}
+#card {
+    background: white;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    width: 700px;
+    margin: 10px auto;
+}
+.list-inline > li {
+    display: inline-block;
+    padding: 0px 20px;
+    margin: 5px;
+    font-size: 40px;
+    text-decoration: hover;
+    
+}
+#main-pic {
+    border-radius: 50%;
+    width: 300px;
+}
+@media (max-width: 960px) {
+    /* For a screen < 960px, this CSS will be read */
+    .container {
+      width: 700px;
+    }
+}
+@media (max-width: 720px) {
+    /* For a screen < 720px, this CSS will be read */
+    .container {
+      width: 500px;
+    }
+}
+@media (max-width: 540px) {
+    /* For a screen < 540px, this CSS will be read */
+    .container {
+      width: 300px;
+    }
+}
