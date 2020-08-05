@@ -60,7 +60,7 @@ a:hover {
 
 #main-pic {
     border-radius: 50%;
-    width: 40%;
+    width: 25%;
 }
 
 @media (max-width: 720px) {
