@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
   <script src="https://kit.fontawesome.com/a076d0539.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script>
   <script src="https://kit.fontawesome.com/d0cd76fe63.js" crossorigin="anonymous"></script>
   <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
@@ -17,11 +18,11 @@
     <div class="max-width">
       <div class="logo"> <a href="#">Portfolio</a></div>
       <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Stack</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#stack">Stack</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="menu-btn">
         <i class="fas fa-bars"></i>
@@ -53,7 +54,7 @@
             Journalism, I have decided to change areas in 2020. I took a bootcamp at Le Wagon, where I graduated as a
             Junior Full Stack Developer. Since them, I´ve been studying daily to become a better programmer. Currently,
             I'm taking a technical Course at Senac Brasil in Web Development.</p>
-          <a href="#">Download my CV</a>
+          <a href="https://drive.google.com/file/d/1NrYfaXt1j0N_CNG65EYyO2faN4O_AtxJ/view?usp=sharing">Download my CV</a>
         </div>
       </div>
     </div>
@@ -141,37 +142,132 @@
         My Projects</h2>
       <div class="projects-content">
         <div class="card">
-          <div class="box">
-            <i class="fas fa-hands"></i>
-            <div class="text">
-              Kaabo</div>
-            <p>
-              Final project for the Le Wagon Bootcamp. Fully conceived and developed in two weeks by me and three other colleagues.</p>
-          </div>
+          <a href="http://www.kaabo.network/" target="_blank" rel="noopener noreferrer">
+            <div class="box">
+              <i class="fas fa-hands"></i>
+              <div class="text">
+                Kaabo</div>
+              <p>
+                Final project for the Le Wagon Bootcamp. Fully conceived and developed in two weeks by me and three
+                other colleagues.</p>
+            </div>
+          </a>
         </div>
         <div class="card">
-          <div class="box">
-            <i class="fas fa-cocktail"></i>
-            <div class="text">
-              The Dude Cocktail</div>
-            <p>
-              A fun side project made to test some features on Ruby on Rails. It works as a cocktail's recipe book.</p>
-          </div>
+          <a href="https://dudecocktail.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+            <div class="box">
+              <i class="fas fa-cocktail"></i>
+              <div class="text">
+                The Dude Cocktail</div>
+              <p>
+                A fun side project made to test some features on Ruby on Rails. It works as a cocktail's recipe book.
+              </p>
+            </div>
+          </a>
         </div>
         <div class="card">
-          <div class="box">
-            <i class="fas fa-paw"></i>
-            <div class="text">
-              Pet Vet</div>
-            <p>
-              A simple project to try some skills in .Net</p>
-          </div>
+          <a href="https://airbnb-jakexiao.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+            <div class="box">
+              <i class="fab fa-airbnb"></i>
+              <div class="text">
+                AirBnB Clone</div>
+              <p>
+                Another project developed during the Le Wagon Bootcamp. the may perk here is the search bar that shows
+                the results on the map.</p>
+            </div>
+          </a>
+        </div>
+        <div class="more">
+          <p>Take a look at more of my projects on my <a href="https://github.com/danielschia" target="_blank"
+              rel="noopener noreferrer">GitHub</a>!</p>
         </div>
       </div>
     </div>
     </div>
-
   </section>
+  <!-- contact section start -->
+  <section class="contact" id="contact">
+    <div class="max-width">
+      <h2 class="title">
+        Contact me</h2>
+      <div class="contact-content">
+        <div class="column left">
+          <p>
+            If you're looking for a really motivated developer to join your team, feel free to contact me! </p>
+          <div class="icons">
+            <div class="row">
+              <i class="fas fa-user"></i>
+              <div class="info">
+                <div class="sub-title">
+                  Daniel Schiavoni</div>
+              </div>
+            </div>
+            <div class="row">
+              <i class="fas fa-phone-square"></i>
+              <div class="info">
+                <div class="sub-title">
+                  +351 912083730</div>
+              </div>
+            </div>
+            <div class="row">
+              <i class="fas fa-envelope"></i>
+              <div class="info">
+                <div class="sub-title">
+                  daniel.schia@gmail.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column right">
+          <div class="text">
+            Follow me</div>
+          <div class="icons">
+            <a href="https://linkedin.com/in/daniel-schia" target="_blank" rel="noopener noreferrer">
+              <div class="row">
+                <i class="fab fa-linkedin"></i>
+                <div class="info">
+                  <div class="head">
+                    linkedin.com/in/daniel-schia</div>
+                </div>
+              </div>
+            </a>
+            <a href="https://github.com/danielschia" target="_blank" rel="noopener noreferrer">
+              <div class="row">
+                <i class="fab fa-github"></i>
+                <div class="info">
+                  <div class="head">
+                    github.com/danielschia</div>
+                </div>
+              </div>
+            </a>
+            <a href="https://twitter.com/Patr00" target="_blank" rel="noopener noreferrer">
+              <div class="row">
+                <i class="fab fa-twitter"></i>
+                <div class="info">
+                  <div class="head">
+                    @Patr00</div>
+                </div>
+              </div>
+          </div>
+          </a>
+          <a href="https://wa.me/351912083730" target="_blank" rel="noopener noreferrer">
+            <div class="row">
+              <i class="fab fa-whatsapp"></i>
+              <div class="info">
+                <div class="head">
+                  Daniel Schiavoni</div>
+              </div>
+            </div>
+        </div>
+        </a>
+      </div>
+    </div>
+    </div>
+  </section>
+    <!-- footer section start -->
+    <footer>
+      <span>Made by <a href="https://github.com/danielschia">Daniel Schiavoni</a>
+    </footer>
   <script src="script.js"></script>
 </body>
 

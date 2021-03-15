@@ -12,6 +12,10 @@
     margin: auto;
 }
 
+section{
+    padding: 100px 0;
+}
+
 /* Navbar */
 .navbar{
     position: fixed;
@@ -100,11 +104,11 @@ section{
     padding: 100px 0;
 }
 
-.about, .stack, .projects{
+.about, .stack, .projects, .contact, footer{
     font-family: 'Rajdhani', sans-serif;
 }
 
-.about .title, .stack .title, .projects .title{
+.about .title, .stack .title, .projects .title, .contact .title{
     position: relative;
     font-family: 'Rajdhani', sans-serif;
     font-size: 40px;
@@ -116,7 +120,8 @@ section{
 
 .about .about-content,
 .stack .stack-content,
-.projects .projects-content{
+.projects .projects-content,
+.contact .contact-content{
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -254,9 +259,11 @@ section{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.projects .projects-content .card:hover{
-    background: crimson;
+
+.projects .projects-content .card a{
+    color: white;
 }
+
 .projects .projects-content .card .box{
     transition: all 0.3s ease;
 }
@@ -265,17 +272,84 @@ section{
 }
 .projects .projects-content .card i{
     font-size: 50px;
-    color: crimson;
+    color: #ffd369;
     transition: color 0.3s ease;
 }
 .projects .projects-content .card:hover i{
-    color: #fff;
+    color: #ffd369;
 }
 .projects .projects-content .card .text{
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
 }
+
+.projects .projects-content .more{
+    margin-top: 20px;
+    font-size: 25px;
+}
+.projects .projects-content .more a{
+    color:#ffd369; 
+}
+.projects .projects-content .more a:hover{
+    text-decoration: underline;
+}
+
+/* contact section styling */
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content a{
+    color: black;
+}
+.contact .contact-content .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+    font-size: 25px;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: black;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+    font-size: 25px;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+    font-size: 25px;
+}
+
+/* footer section styling */
+footer{
+    background: #111;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+footer span a{
+    color: #ffd369;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
 
 
 
@@ -351,6 +425,10 @@ section{
     .about .about-content .right{
         flex: 100%;
     }
+    .projects .projects-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
     .stack .stack-content .column,
     .contact .contact-content .column{
         width: 100%;
@@ -374,6 +452,9 @@ section{
     .stack .stack-content .column{
         width: 100%;
     }
+    .projects .projects-content .card{
+        width: 100%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -389,10 +470,6 @@ section{
     }
     .contact .right form .fields{
         flex-direction: column;
-    }
-    .contact .right form .name,
-    .contact .right form .email{
-        margin: 0;
     }
     .scroll-up-btn{
         right: 15px;
