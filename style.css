@@ -1,76 +1,405 @@
-h1, h2, h3 {
-    font-family:'Recursive', sans-serif;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
-h1 {
-    color: #536B78;
-    font-weight: 700;
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
 }
 
-h2 {
-    color: #7C98B3;
-    font-weight: 400;
+/* Navbar */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 20px 0;
+    background: #ffd369;
+    font-family: 'Rajdhani', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: #ffd369;
 }
 
-body{
-    background-color: #CEE5F2;
-    font-family: 'Recursive', sans-serif;
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-p{
-    color: #637081;
-    font-weight: 400;
+.navbar .logo a{
+    color: #222831;
+    font-size: 35px;
+    font-weight: 600;
 }
 
-a{
-    color: rgba(160, 160, 160, 0.8);
-}
-
-a:hover {
-    color: black;
-}
-
-.container {
-    width: 700px;
-    margin: 40px auto;
-}
-
-.text-center {
-    text-align: center;
-}
-
-#card {
-    background: white;
-    padding: 30px;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0,0,0,.1);
-    width: 80%;
-    margin: 10px auto;
-}
-
-.list-inline > li {
+.navbar .menu li{
+    list-style: none;
     display: inline-block;
-    padding: 0px 20px;
-    margin: 5px;
+}
+
+.navbar .menu li a{
+    display: block;
+    color: #222831;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: ease;
+}
+.navbar .menu li a:hover{
+    font-weight: 600;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+/* menu button styling */
+.menu-btn{
+    color: #111;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+
+/* home styling */
+.home{
+    display:flex;
+    height: 100vh;
+    background-color: #222831;
+    color: #eeeeee;
+    font-family: 'Rajdhani', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
     font-size: 40px;
-    text-decoration: hover;
-    
+    margin: 5px 0;
 }
 
-#main-pic {
-    border-radius: 50%;
-    width: 25%;
+.about .about-content .column{
+    width: 50%;
 }
 
-@media (max-width: 720px) {
-    /* For a screen < 720px, this CSS will be read */
-    .container {
-      width: 500px;
-    }
-    h1 {width: 50%;
+/*about section */
+section{
+    padding: 100px 0;
+}
+
+.about, .stack, .projects{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.about .title, .stack .title, .projects .title{
+    position: relative;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
     text-align: center;
-    margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.about .about-content,
+.stack .stack-content,
+.projects .projects-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.about .about-content .left{
+    width: 45%;
+}
+
+.about .about-content .left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.about .about-content .right span{
+    color:#ffd369;
+}
+
+.about .about-content .right p{
+    text-align: justify;
+    font-size: 25px;
+}
+
+.about .about-content .right a{
+    display: inline-block;
+    background: #ffd369;
+    color: #111;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #ffd369;
+    transition: all 0.3s ease;
+}
+
+.about .about-content .right a:hover{
+    color: #111;
+    background: none;
+}
+
+/*Stack section*/
+
+.stack .stack-content .column{
+    width: calc(50% - 30px);
+}
+.stack .stack-content .left .text{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.stack .stack-content .left p{
+    text-align: justify;
+    font-size: 25px;
+}
+
+.stack .stack-content .left a:hover{
+    color: #111;
+    background: none;
+}
+.stack .stack-content .right .bars{
+    margin-bottom: 15px;
+}
+.stack .stack-content .right .info{
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.stack .stack-content .right span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.stack .stack-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.stack .stack-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #111;
+}
+.stack-content .right .html::before{
+    width: 90%;
+}
+.stack-content .right .css::before{
+    width: 80%;
+}
+.stack-content .right .js::before{
+    width: 50%;
+}
+.stack-content .right .git::before{
+    width: 80%;
+}
+.stack-content .right .mysql::before{
+    width: 60%;
+}
+.stack-content .right .python::before{
+    width: 50%;
+}
+.stack-content .right .postgresql::before{
+    width: 60%;
+}
+
+/* services section styling */
+.projects{
+    color:#fff;
+    background: #111;
+}
+
+.projects .projects-content .card{
+    width: calc(33% - 20px);
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.projects .projects-content .card:hover{
+    background: crimson;
+}
+.projects .projects-content .card .box{
+    transition: all 0.3s ease;
+}
+.projects .projects-content .card:hover .box{
+    transform: scale(1.05);
+}
+.projects .projects-content .card i{
+    font-size: 50px;
+    color: crimson;
+    transition: color 0.3s ease;
+}
+.projects .projects-content .card:hover i{
+    color: #fff;
+}
+.projects .projects-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+
+
+/* responsive media query start */
+@media (max-width: 1300px) {
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 947px) {
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #ffd369;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0%;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .home .home-content a{
+        font-size: 23px;
+        padding: 10px 30px;
+    }
+    .max-width{
+        max-width: 930px;
+    }
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .stack .stack-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .home .home-content a{
+        font-size: 20px;
+    }
+    .stack .stack-content .column{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+    .about .about-content .right .text,
+    .skills .skills-content .left .text{
+        font-size: 19px;
+    }
+    .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    .scroll-up-btn{
+        right: 15px;
+        bottom: 15px;
+        height: 38px;
+        width: 35px;
+        font-size: 23px;
+        line-height: 38px;
     }
 }
