@@ -24,8 +24,8 @@ section{
     padding: 100px 0;
 }
 
-/* Navbar */
-.navbar{
+/* Navbar styling */
+.navbar {
     position: fixed;
     width: 100%;
     z-index: 999;
@@ -34,70 +34,101 @@ section{
     font-family: 'Rajdhani', sans-serif;
     transition: all 0.3s ease;
 }
-.navbar.sticky{
-    padding: 15px 0;
-    background: #ffd369;
-}
 
-.navbar .max-width{
+.navbar .max-width {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.navbar .logo a{
-    color: #222831;
+.navbar .logo a {
+    color: white;
     font-size: 35px;
     font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
+.navbar .logo a:hover {
+    transform: scale(1.1);
+}
+
+/* Desktop menu styling */
 .navbar .menu {
-  display: none;
-  flex-direction: column;
-  background: #333;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.navbar .menu.active {
-  display: flex;
+    display: flex;
+    position: static;
+    height: auto;
+    width: auto;
+    background: none;
+    padding: 0;
 }
 
 .navbar .menu li {
-  text-align: center;
-  padding: 10px 0;
+    list-style: none;
+    display: inline-block;
 }
 
-.navbar .menu li a{
+.navbar .menu li a {
     display: block;
     color: #222831;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
-    transition: ease;
+    transition: color 0.3s ease;
 }
-.navbar .menu li a:hover{
-    font-weight: 600;
-}
-.navbar.sticky .menu li a:hover{
+
+.navbar .menu li a:hover {
     color: #fff;
+    transform: scale(1.1);
 }
 
-/* menu button styling */
+/* Hide menu button on desktop */
 .menu-btn {
-  display: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: #fff;
+    display: none;
 }
 
+/* Mobile menu styling */
 @media (max-width: 768px) {
-  .navbar .menu-btn {
-    display: block;
-  }
+    .menu-btn {
+        display: block;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #333;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+        color: #fff;
+    }
+
+    .navbar .menu li a:hover {
+        color: #ffd369;
+    }
+
+    .navbar .logo a {
+        font-size: 28px;
+    }
 }
 
 /* home styling */
@@ -372,12 +403,21 @@ section{
     background: #111;
 }
 
-.projects .projects-content .card{
-    width: calc(33% - 20px);
+/* Projects section styling */
+.projects .projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.projects .projects-content .card {
+    width: calc(33.33% - 20px);
     background: #222;
     text-align: center;
     border-radius: 6px;
     padding: 20px 25px;
+    margin-bottom: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -423,14 +463,11 @@ section{
   gap: 20px;
 }
 
-.projects-content .card {
-  flex: 1 1 calc(50% - 20px);
-}
-
 @media (max-width: 768px) {
-  .projects-content .card {
-    flex: 1 1 100%;
-  }
+    .projects .projects-content .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 /* contact section styling */
@@ -462,11 +499,12 @@ section{
 }
 .contact .contact-content .row i{
     font-size: 25px;
-    color: black;
+    color: black; /* Change icon color to black */
+    margin-right: 15px;
 }
 .contact .contact-content .info .head{
     font-weight: 500;
-    font-size: 25px;
+    font-size: 25px; /* Match email font size */
 }
 .contact .contact-content .info .sub-title{
     color: #333;
@@ -500,6 +538,66 @@ section{
   margin-right: 10px;
 }
 
+/* Contact section icon and text spacing */
+.contact .contact-content .icons .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 5px; /* Add small gap between icon and text */
+}
+
+.contact .contact-content .icons .row i {
+    font-size: 25px;
+    margin-right: 5px; /* Reduce right margin */
+}
+
+.contact .contact-content .icons .row .info {
+    margin-left: 0; /* Remove left margin */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .contact .contact-content .icons .row {
+        justify-content: center;
+        gap: 3px; /* Even smaller gap on mobile */
+    }
+
+    .contact .contact-content .icons .row i {
+        margin-right: 3px; /* Smaller margin on mobile */
+    }
+}
+
+/* Contact section icon and text spacing */
+.contact .contact-content .icons .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact .contact-content .icons .row i {
+    font-size: 25px;
+    margin-right: 10px; /* Reduced space between icon and text */
+}
+
+.contact .contact-content .icons .row .info {
+    margin-left: 10px; /* Reduced margin */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .contact .contact-content .icons .row {
+        justify-content: center;
+    }
+
+    .contact .contact-content .icons .row i {
+        margin-right: 5px; /* Even less space on mobile */
+    }
+
+    .contact .contact-content .icons .row .info {
+        margin-left: 5px; /* Less margin on mobile */
+    }
+}
+
 @media (max-width: 768px) {
   .contact-content .icons .row {
     flex-direction: column;
@@ -509,6 +607,72 @@ section{
   .contact-content .icons .row i {
     margin: 0 0 10px 0;
   }
+}
+
+/* Contact section responsive styling */
+@media (max-width: 768px) {
+    .contact .contact-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact .contact-content .icons {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact .contact-content .row {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .contact .contact-content .info .head {
+        font-size: 25px;
+    }
+
+    .contact .contact-content .info .sub-title {
+        font-size: 25px;
+    }
+}
+
+/* Contact section styling */
+.contact .column.right .icons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact .column.right .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.contact .column.right .row i {
+    font-size: 25px;
+    color: black; /* Change icon color to black */
+    margin-right: 15px;
+}
+
+.contact .column.right .row .info .head {
+    font-size: 25px; /* Match email font size */
+    font-weight: 500;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .contact .column.right .icons {
+        align-items: center;
+    }
+
+    .contact .column.right .row {
+        justify-content: center;
+    }
 }
 
 /* footer section styling */
@@ -609,10 +773,6 @@ footer a {
     }
     .about .about-content .right{
         flex: 100%;
-    }
-    .projects .projects-content .card{
-        width: calc(50% - 10px);
-        margin-bottom: 20px;
     }
     .stack .stack-content .column,
     .contact .contact-content .column{
