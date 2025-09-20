@@ -6,10 +6,13 @@ $(document).ready(function(){
             $('.navbar').removeClass("sticky");
         }
     });
+});
 
-    // toggle menu/navbar script
-    $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
-    });
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.querySelector(".menu-btn");
+  const menu = document.querySelector(".menu");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
 });

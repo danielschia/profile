@@ -53,7 +53,6 @@ section{
 
 .navbar .menu {
   display: flex;
-  justify-content: space-between;
   list-style: none;
 }
 
@@ -80,6 +79,7 @@ section{
 /* menu button styling */
 .menu-btn {
   display: none;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -94,13 +94,19 @@ section{
     z-index: 1000;
   }
 
-  .navbar .menu-btn {
-    display: block;
-    cursor: pointer;
-  }
-
   .navbar .menu.active {
     display: flex;
+  }
+
+  .navbar .menu li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar .menu-btn {
+    display: block;
+    color: #fff;
+    font-size: 24px;
   }
 }
 
