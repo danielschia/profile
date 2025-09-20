@@ -162,6 +162,29 @@ section{
     width: 50%;
 }
 
+.about .about-content .column.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .about-content .column.left img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .about .about-content .column.left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .about .about-content .column.left img {
+        width: 300px;
+    }
+}
+
 /*about section */
 section{
     padding: 100px 0;
