@@ -101,22 +101,40 @@ section{
 }
 
 /* home styling */
-.home {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Full viewport height */
-  text-align: center;
+.home{
+    display:flex;
+    height: 100vh;
+    background-color: #222831;
+    color: #eeeeee;
+    font-family: 'Rajdhani', sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
 }
 
 .home-content {
-  max-width: 800px;
+  text-align: center;
+  padding: 50px 20px;
 }
 
-.home-content .text-1,
-.home-content .text-2,
-.home-content .text-3 {
-  margin: 10px 0;
+@media (max-width: 768px) {
+  .home-content .text-1,
+  .home-content .text-2,
+  .home-content .text-3 {
+    font-size: 1.5rem;
+  }
 }
 
 .about .about-content .column{
